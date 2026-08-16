@@ -10,10 +10,10 @@ Trabajo práctico de la **Tecnicatura Superior en Desarrollo de Software**: cons
 
 ## URL de Vercel
 
-> **Pendiente:** publicar la carpeta `portfolio/` en Vercel y pegar aquí la URL. El proyecto no se desplegó todavía porque se entrega una vez terminado y revisado. Para publicar: crear un repositorio **público** en GitHub con esta carpeta, entrar a <https://vercel.com>, elegir *New Project*, importar el repositorio y hacer *Deploy* (no hace falta configuración: es un sitio estático).
+> El proyecto está publicado en Vercel como sitio estático (contenido de la carpeta `portfolio/`).
 
 ```
-URL_VERCEL_PENDIENTE
+https://marcelo-yrala.vercel.app/
 ```
 
 ## Criterios de la consigna
@@ -33,8 +33,8 @@ URL_VERCEL_PENDIENTE
 | **Transición/animación** | Hover con inversión de color, transiciones, cursor parpadeante, máquina de escribir y *reveal on scroll* (`IntersectionObserver`). |
 | **Imágenes con `alt`** | `avatar.svg` y `featured.svg` con descripciones en `alt`. |
 | **Formulario con `label`** | Campos `TU_NOMBRE`, `TU_EMAIL` y `MENSAJE` con `<label>` explícito. |
-| **Enlace GitHub visible** | Botón **GITHUB** en sidebar, `PROTOCOLOS_ALT` de contacto y pie de página (`https://github.com/tu-usuario`). |
-| **Publicación en Vercel** | Pendiente (ver "URL de Vercel"). |
+| **Enlace GitHub visible** | Botón **GITHUB** en sidebar, `PROTOCOLOS_ALT` de contacto y pie de página ([https://github.com/marcelo-yrala](https://github.com/marcelo-yrala)). |
+| **Publicación en Vercel** | Publicado en <https://marcelo-yrala.vercel.app/> (ver "URL de Vercel"). |
 
 ## Estructura de archivos
 
@@ -98,7 +98,7 @@ Todos los valores provienen de `system_static/DESIGN.md` y de los tokens de los 
 - **Landing de una sola página** en lugar de multipágina: mejor para un portafolio breve, mantiene el contexto y simplifica la navegación móvil.
 - **Estética retro-terminal**: coherente con la consigna "minimalist retro dev" y con la identidad de un desarrollador; permite mostrar habilidades de CSS sin depender de librerías.
 - **Contacto como CTA final**: en lugar de un bloque separado "próximos pasos", el formulario de contacto cierra la página y actúa como llamado a la acción.
-- **Enlace de GitHub visible** en tres lugares (sidebar, protocolos de contacto y pie) con placeholder `https://github.com/tu-usuario`, `target="_blank"` y `rel="noopener noreferrer"`.
+- **Enlace de GitHub visible** en tres lugares (sidebar, protocolos de contacto y pie) apuntando a [https://github.com/marcelo-yrala](https://github.com/marcelo-yrala), con `target="_blank"` y `rel="noopener noreferrer"`.
 - **Imágenes SVG autocontenidas**: `avatar.svg` y `featured.svg` son generadas por IA (ver declaración) y no dependen de recursos externos.
 
 ## Declaración de uso de IA
@@ -109,7 +109,7 @@ Este proyecto se desarrolló con asistencia de herramientas de IA:
   - **Stitch** (diseño): los exports en `stitch_minimalist_retro_dev_showcase/` son la referencia visual del sitio; se llevaron a código HTML/CSS/JS.
   - **opencode** con un modelo de IA (plan gratuito, **DeepSeek**): asistencia para escribir y revisar el HTML, CSS y JavaScript.
 - **Plan utilizado:** plan gratuito.
-- **Experiencia previa:** [completar: describí acá si ya usaste estas herramientas antes y con qué nivel de familiaridad].
+- **Experiencia previa:** Experiecia basica creando algunos sitios estaticos y en python con flask.
 - **Qué revisé y adapté:** el código generado se revisó y ajustó manualmente para cumplir los criterios de la consigna (semántica HTML, un solo `h1`, accesibilidad, responsive, formulario con `label`), se validó el HTML, se verificó con el navegador que no haya desbordes horizontales a 320px/360px y se corrigieron los problemas encontrados (por ejemplo, el tamaño del placeholder del formulario y el desborde del botón CTA en pantallas muy angostas).
 - **Imágenes:** `assets/images/avatar.svg` y `assets/images/featured.svg` fueron generadas por IA y guardadas como SVG.
 
@@ -119,6 +119,6 @@ Los valores de marca se centralizan en las variables `:root` del inicio de `asse
 
 ### Enlace de GitHub
 
-El sitio usa `https://github.com/tu-usuario` como placeholder (aún no hay cuenta). Para activar tu perfil real, reemplaza esa URL en `index.html` (sidebar, `PROTOCOLOS_ALT` de contacto y pie de página).
+El sitio enlaza al perfil público [https://github.com/marcelo-yrala](https://github.com/marcelo-yrala) en tres lugares de `index.html`: sidebar, `PROTOCOLOS_ALT` de contacto y pie de página.
 
 > Sugerencia: el enlace abre en pestaña nueva (`target="_blank"`) y usa `rel="noopener noreferrer"`.
