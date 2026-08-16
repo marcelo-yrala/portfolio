@@ -39,7 +39,7 @@ https://marcelo-yrala.vercel.app/
 | **Imágenes con `alt`** | `avatar.svg` y `featured.svg` con descripciones en `alt`. |
 | **Formulario con `label`** | Campos `TU_NOMBRE`, `TU_EMAIL` y `MENSAJE` con `<label>` explícito. |
 | **Enlace GitHub visible** | Botón **GITHUB** en sidebar, `PROTOCOLOS_ALT` de contacto y pie de página ([https://github.com/marcelo-yrala](https://github.com/marcelo-yrala)). |
-| **Publicación en Vercel** | Publicado en <https://marcelo-yrala.vercel.app/> (ver "URL de Vercel"). |
+| **Publicación en Vercel** | Publicado en <https://marcelo-yrala.vercel.app/> . |
 
 ## Estructura de archivos
 
