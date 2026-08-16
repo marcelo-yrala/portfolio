@@ -57,24 +57,14 @@ portfolio/
 └── README.md
 ```
 
-> El resto de carpetas del directorio raíz (`*_portfolio_retro*`) contienen los **exports de diseño de Stitch** (HTML de referencia y capturas) usados como fuente para este sitio. `system_static/DESIGN.md` define los tokens de diseño.
 
 ## Cómo verlo
 
-El sitio es **100 % estático** — basta con abrir `index.html` en el navegador. Para una experiencia completa:
-
-```bash
-# Desde la carpeta portfolio/
-python3 -m http.server 8000
-# o
-npx serve .
-```
-
-Luego abre <http://localhost:8000>. Solo se necesita conexión a internet para cargar las fuentes de Google Fonts.
+El sitio es **100 % estático** — basta con abrir `index.html` en el navegador. 
 
 ## Sistema de diseño
 
-Todos los valores provienen de `system_static/DESIGN.md` y de los tokens de los exports de Stitch:
+Todos los valores provienen de `/DESIGN.md` y de los tokens de los exports de Stitch:
 
 - **Colores:** superficies neutras `#fcf9f8`/`#cccccc`, texto `#1c1b1b`, acento primario azul `#003594`/`#002265` y acento secundario rubí `#b80045`/`#e21a5a`.
 - **Tipografía:** únicamente *JetBrains Mono* (headline 32px/24px, body 16px/14px, label 12px con tracking, code 13px).
