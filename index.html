@@ -21,7 +21,7 @@
   <div class="scanlines" aria-hidden="true"></div>
 
   <!-- ===== Barra superior (móvil) ===== -->
-  <header class="topbar">
+  <header class="topbar" role="banner">
     <div class="topbar-brand">
       <span class="material-symbols-outlined" aria-hidden="true">terminal</span>
       <span class="h-md">PORTFOLIO_ROOT</span>
@@ -30,7 +30,7 @@
   </header>
 
   <!-- ===== Barra lateral (escritorio) ===== -->
-  <aside class="sidebar" aria-label="Navegación principal">
+  <aside class="sidebar" aria-label="Navegación principal" role="complementary">
     <header class="sidebar-header">
       <img class="avatar" src="assets/images/avatar.svg" alt="Avatar pixelado de Marcelo Yrala" width="52" height="52">
       <div>
@@ -76,13 +76,14 @@
 
   <!-- ===== Contenido principal ===== -->
   <div class="shell">
-  <main class="main">
+  <main class="main" role="main">
     <div class="sr-only">
       <h1 class="h-lg">Portfolio de Marcelo Yrala</h1>
     </div>
 
     <!-- ============ 1. PRESENTACIÓN ============ -->
-    <section id="presentacion" aria-label="Presentación">
+    <section id="presentacion" aria-labelledby="presentacion-title">
+      <h2 class="sr-only" id="presentacion-title">Presentación</h2>
       <div class="term-window reveal">
         <div class="term-titlebar">
           <span class="label">tty1 — bash</span>
@@ -220,6 +221,7 @@
           <div class="card-body">
             <div class="table-wrap">
               <table class="sys-table modern-table">
+                <caption class="sr-only">Nivel de competencia en desarrollo Front End</caption>
                 <thead>
                   <tr>
                     <th>MODULO</th>
@@ -267,6 +269,7 @@
           <div class="card-body">
             <div class="table-wrap">
               <table class="sys-table modern-table">
+                <caption class="sr-only">Nivel de competencia en desarrollo de software</caption>
                 <thead>
                   <tr>
                     <th>MODULO</th>
@@ -326,6 +329,7 @@
           <div class="card-body">
             <div class="table-wrap">
               <table class="sys-table modern-table">
+                <caption class="sr-only">Nivel de competencia en herramientas</caption>
                 <thead>
                   <tr>
                     <th>MODULO</th>
@@ -373,6 +377,7 @@
           <div class="card-body">
             <div class="table-wrap">
               <table class="sys-table modern-table">
+                <caption class="sr-only">Nivel de competencia en otros conocimientos</caption>
                 <thead>
                   <tr>
                     <th>MODULO</th>
@@ -641,7 +646,7 @@
         </div>
 
         <div class="statusbar">
-          <span class="status-text" data-status-text>STATUS: Esperando entrada...</span>
+          <span class="status-text" data-status-text aria-live="polite">STATUS: Esperando entrada...</span>
           <span class="code-sm text-on-surface-variant" aria-hidden="true"><span class="cursor" style="height:12px;"></span></span>
         </div>
       </div>
@@ -653,7 +658,7 @@
             <span class="material-symbols-outlined" aria-hidden="true">code</span>
             <span>GITHUB</span>
           </a>
-          <a class="alt-link" href="#" title="LINKEDIN">
+          <a class="alt-link" href="https://www.linkedin.com/TodaviaNoTengo" title="LINKEDIN">
             <span class="material-symbols-outlined" aria-hidden="true">work</span>
             <span>LINKEDIN</span>
           </a>
@@ -671,7 +676,7 @@
   </div>
 
   <!-- ===== Pie de página del sitio ===== -->
-  <footer class="site-footer" aria-label="Pie de página">
+  <footer class="site-footer" aria-label="Pie de página" role="contentinfo">
     <div class="site-footer-top">
       <div class="site-footer-brand">
         <span class="h-md">MARCELO YRALA</span>

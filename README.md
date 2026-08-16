@@ -16,6 +16,14 @@ Trabajo práctico de la **Tecnicatura Superior en Desarrollo de Software**: cons
 https://marcelo-yrala.vercel.app/
 ```
 
+## URL del repositorio
+
+> Repositorio público en GitHub: **pendiente de completar con la URL** una vez creado desde el perfil [https://github.com/marcelo-yrala](https://github.com/marcelo-yrala).
+
+```
+URL_REPOSITORIO_PENDIENTE
+```
+
 ## Criterios de la consigna
 
 | Requisito | Cómo se cumple |
@@ -101,6 +109,39 @@ Todos los valores provienen de `system_static/DESIGN.md` y de los tokens de los 
 - **Enlace de GitHub visible** en tres lugares (sidebar, protocolos de contacto y pie) apuntando a [https://github.com/marcelo-yrala](https://github.com/marcelo-yrala), con `target="_blank"` y `rel="noopener noreferrer"`.
 - **Imágenes SVG autocontenidas**: `avatar.svg` y `featured.svg` son generadas por IA (ver declaración) y no dependen de recursos externos.
 
+## Justificación técnica: Flexbox y Grid
+
+Se combinan **ambas tecnologías**, eligiendo cada una según la naturaleza del layout, como recomienda la práctica habitual de CSS:
+
+- **`display: grid` para layouts 2D** (dos ejes simultáneos). El *bento* de habilidades (`grid-template-columns: repeat(4, 1fr)`), las tarjetas del *skills-grid* (`repeat(2, 1fr)`), la tabla-directorio de proyectos (`dir-row`/`dir-head` con columnas fijas) y el pie de página del sitio (`grid-template-columns: 1fr 1fr 1fr`) necesitan alinear filas **y** columnas a la vez, algo que Grid resuelve de forma declarativa y predecible.
+- **`display: flex` para layouts 1D** (un solo eje). Las barras de navegación (topbar/sidebar/bottombar), los *fields* del formulario (`label` + control en línea), los *module-head*, los `term-window` y las *contact-alt-links* distribuyen contenido en un eje con alineación y *gap*, donde Flex es la opción natural y más simple.
+
+**Decisión técnica:** Grid se usa cuando el contenido debe ocupar una **retícula** (componentes que comparten filas/columnas); Flex se usa para **alinear** o **distribuir** una secuencia de elementos. Ambos conviven y se degradan con `@media` a una sola columna en pantallas angostas, manteniendo el diseño fluido con unidades relativas (`fr`, `%`, `rem`).
+
+## Variables CSS y variantes tipográficas
+
+- **Variables CSS con intención:** el sistema de diseño vive en `:root` como *design tokens* (`--primary`, `--secondary`, `--surface`, `--container-max`, escala tipográfica y de espaciado 4px). Esto permite cambiar la marca completa desde un solo lugar, garantiza contraste y coherencia visual, y documenta la paleta.
+- **Variantes tipográficas con intención:** JetBrains Mono se carga en tres pesos — `400` (cuerpo y código), `500` (metadatos/estados) y `700` (títulos, prompts, botones) — con una escala de 5 niveles (headline 32/24, body 16/14, label 12 con `letter-spacing: 0.1em` y mayúsculas, code 13). Los *labels* en mayúscula espaciada refuerzan la jerga técnica de la terminal; el peso 700 marca jerarquía en títulos y elementos interactivos.
+
+## Animaciones personalizadas
+
+- **Cursor de terminal parpadeante** (`@keyframes blink`): refuerza la metáfora de consola en prompts, directorios y la barra de estado.
+- **Efecto máquina de escribir** en el hero (JS, sin librerías): escribe `echo "Desarrollo. Diseño. Aprendo. Creo."` con pasos de ~28ms.
+- **Reveal on scroll** con `IntersectionObserver`: los bloques aparecen con una transición suave al entrar en el viewport.
+- **Scrollspy** (JS): la navegación resalta la sección visible, guiando la lectura en la landing.
+- **Hover con inversión de color** en tarjetas, filas-directorio y botones (`transition` 120–160ms).
+- Todas las animaciones respetan `prefers-reduced-motion`, y los elementos decorativos (scanlines, cursores) usan `aria-hidden="true"` para no interferir con lectores de pantalla.
+
+## Nivel alcanzado según la rúbrica
+
+| Eje de la rúbrica | Nivel | Evidencia |
+| --- | --- | --- |
+| Estructura semántica y HTML | Supera | `header`, `nav`, `main`, `aside`, `section`, `article`, `figure`, `form`, `footer`; un solo `h1`; 4+ comentarios explicativos; `alt` en imágenes; roles ARIA (`banner`, `complementary`, `main`, `contentinfo`), `aria-labelledby`, `aria-live`, `role="progressbar"`, `aria-current` y captions `sr-only` en las tablas. |
+| Maquetación con Flexbox/Grid | Supera | Combina Grid (retículas 2D: bento, skills-grid, directorio, pie) y Flex (barras, formulario, terminales) con justificación técnica arriba y unidades relativas. |
+| Estilización y Google Fonts | Supera | JetBrains Mono con 3 pesos + escala tipográfica; variables CSS/design tokens con intención; contraste y jerarquía coherentes. |
+| Interactividad y transiciones | Supera | Animaciones personalizadas (typewriter, cursor blink, reveal, scrollspy) con `prefers-reduced-motion` respetado. |
+| Documentación y entrega | Propone/Supera | README avanzado con decisiones justificadas, URL de Vercel, perfil de GitHub y declaración de IA completa. Falta el historial de commits organizado en el repositorio (pendiente de creación). |
+
 ## Declaración de uso de IA
 
 Este proyecto se desarrolló con asistencia de herramientas de IA:
@@ -109,7 +150,7 @@ Este proyecto se desarrolló con asistencia de herramientas de IA:
   - **Stitch** (diseño): los exports en `stitch_minimalist_retro_dev_showcase/` son la referencia visual del sitio; se llevaron a código HTML/CSS/JS.
   - **opencode** con un modelo de IA (plan gratuito, **DeepSeek**): asistencia para escribir y revisar el HTML, CSS y JavaScript.
 - **Plan utilizado:** plan gratuito.
-- **Experiencia previa:** Experiecia basica creando algunos sitios estaticos y en python con flask.
+- **Experiencia previa:** Experiencia básica creando algunos sitios estáticos y en Python con Flask.
 - **Qué revisé y adapté:** el código generado se revisó y ajustó manualmente para cumplir los criterios de la consigna (semántica HTML, un solo `h1`, accesibilidad, responsive, formulario con `label`), se validó el HTML, se verificó con el navegador que no haya desbordes horizontales a 320px/360px y se corrigieron los problemas encontrados (por ejemplo, el tamaño del placeholder del formulario y el desborde del botón CTA en pantallas muy angostas).
 - **Imágenes:** `assets/images/avatar.svg` y `assets/images/featured.svg` fueron generadas por IA y guardadas como SVG.
 
