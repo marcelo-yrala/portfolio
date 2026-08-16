@@ -10,7 +10,6 @@ Trabajo práctico de la **Tecnicatura Superior en Desarrollo de Software**: cons
 
 ## URL de Vercel
 
-> El proyecto está publicado en Vercel como sitio estático (contenido de la carpeta `portfolio/`).
 
 ```
 https://marcelo-yrala.vercel.app/
@@ -18,11 +17,9 @@ https://marcelo-yrala.vercel.app/
 
 ## URL del repositorio
 
-> Repositorio público en GitHub: **pendiente de completar con la URL** una vez creado desde el perfil [https://github.com/marcelo-yrala](https://github.com/marcelo-yrala).
+> Repositorio público en GitHub: https://https://github.com/marcelo-yrala/portfolio
 
-```
-URL_REPOSITORIO_PENDIENTE
-```
+
 
 ## Criterios de la consigna
 
@@ -147,7 +144,7 @@ Se combinan **ambas tecnologías**, eligiendo cada una según la naturaleza del 
 Este proyecto se desarrolló con asistencia de herramientas de IA:
 
 - **Herramientas utilizadas:**
-  - **Stitch** (diseño): los exports en `stitch_minimalist_retro_dev_showcase/` son la referencia visual del sitio; se llevaron a código HTML/CSS/JS.
+  - **Stitch** (diseño): los exports son la referencia visual del sitio; se llevaron a código HTML/CSS/JS.
   - **opencode** con un modelo de IA (plan gratuito, **DeepSeek**): asistencia para escribir y revisar el HTML, CSS y JavaScript.
 - **Plan utilizado:** plan gratuito.
 - **Experiencia previa:** Experiencia básica creando algunos sitios estáticos y en Python con Flask.
