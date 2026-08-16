@@ -121,4 +121,3 @@ Los valores de marca se centralizan en las variables `:root` del inicio de `asse
 
 El sitio enlaza al perfil público [https://github.com/marcelo-yrala](https://github.com/marcelo-yrala) en tres lugares de `index.html`: sidebar, `PROTOCOLOS_ALT` de contacto y pie de página.
 
-> Sugerencia: el enlace abre en pestaña nueva (`target="_blank"`) y usa `rel="noopener noreferrer"`.
