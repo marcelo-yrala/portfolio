@@ -11,9 +11,8 @@ Trabajo práctico de la **Tecnicatura Superior en Desarrollo de Software**: cons
 ## URL de Vercel
 
 
-```
 https://marcelo-yrala.vercel.app/
-```
+
 
 ## URL del repositorio
 
